@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp API</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="bootcampWidgetAlpine.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Diplomata SC|Pacifico|Exo|Source Code Pro&display=swap ">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+</head>
+
+<body>
+    <h1>My API Widget</h1>
+
+    <div class="container">
+        <div class="widgets">
+            <div class="widget" x-data="BootcampWidget1">
+                <h3>Word Game</h3>
+                <div class="">
+                    <textarea class="sentenceholder" x-model="sentence" name="" id=""></textarea>
+                </div>
+                <div>
+                    <button x-on:click="checkSentence" class="btn-sentence">
+                        <img src="./images/sentence.png" width="20" alt="">Check sentence</button>
+                </div>
+                <br>
+                <div>
+                    longest word: <span x-text="longestWord"></span>
+                </div>
+                <div>
+                    shortest word: <span x-text=" shortestWord"></span>
+                </div>
+                <div>
+                    Word lenght: <span x-text="wordLengths"></span>
+                </div>
+            </div>
+
+            <div class="widget" x-data="BootcampWidget2">
+                <h3>Total Phone Bill</h3>
+                <div class="inputBox">
+                    <label for="usedAirtime">Phone Bill:</label>
+                    <textarea x-model="tarrif" name="usedAirtime" id="usedAirtime" type="text"></textarea>
+                </div>
+                <div>
+                    <button @click="checkPhoneBill" class="btn-bill">
+                        <img src="./images/bill.png" width="20" alt="">Check Bill</button>
+                </div>
+                <br>
+                <div>
+                    Total Bill : R<span x-text="billAmount"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="widgets">
+            <div class="widget" x-data="BootcampWidget3">
+                <h3>Enough Airtime</h3>
+                <div class="inputBox">
+                    <label for="usage">Phone Bill:</label> 
+                    <textarea x-model="phoneBill" name="usage" id="usage" type="text"></textarea>
+                </div>
+                <div class="inputBox">
+                    <label for="amount">Airtime available:</label> 
+                    <textarea x-model="airtimeAvailable" name="amount" id="amount" type="text"></textarea>
+                </div>
+                <div>
+                    <button @click="checkAirtime" class="btn-airtime">
+                        <img src="./images/airtime-usage.png" width="15" alt="">Check Airtime</button>
+                </div>
+                <br>
+                <div>
+                    Airtime Remaining : R<span x-text="Airtimeleft"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+body {
+    background: linear-gradient(#ff0000, rgba(0, 0, 0, 0.1), #000000), url(./images/banner.jpg);
+    backdrop-filter: blur(2.5px);
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.widget {
+    flex: 1;
+    border: 0;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background: linear-gradient(#ff0000, rgba(0, 0, 0, 0.1), #000000);
+    font-family: cursive;
+    flex-basis: 50%;
+}
+
+h1 {
+    font-family: Diplomata SC;
+    font-size: xxx-large;
+    text-align: center;
+}
+
+h3 {
+    font-family: Pacifico;
+    font-size: xx-large;
+}
+
+.sentenceholder {
+    border-color: transparent;
+    width: 30em;
+    height: 5em ;
+    border: 0em;
+    border-radius: 5px;
+}
+
+.inputBox>label {
+    display: inline-block;
+    width: 85px;
+    position: relative;
+    padding: 5px;
+}
+
+.inputBox>textarea[type="text"] {
+    padding: 5px;
+    background-color: #fff;
+    font-family: Source Code Pro;
+    font-size: medium;
+    border: 0em;
+    border-radius: 5px;
+    width: 30em;
+    height: 1.5em;
+}
+
+.btn-sentence {
+    padding: 1em 0em 1em 0em;
+    width: 10em;
+    background-color: #ff0000;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 2px solid #ff0000;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-sentence img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.1em;
+}
+
+.btn-airtime {
+    padding: 1em 0em 1em 0em;
+    width: 10em;
+    background-color: #ff0000;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 2px solid #ff0000;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-airtime img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.2em;
+}
+
+.btn-bill {
+    padding: 1em 0em 1em 0em;
+    width: 8em;
+    background-color: #ff0000;
+    color: #fff;
+    font-family: Exo;
+    font-weight: bold;
+    border: 2px solid #ff0000;
+    cursor: pointer;
+    border-radius: 1.5em;
+}
+
+.btn-bill img {
+    margin-right: 0.5em;
+    vertical-align: bottom;
+    margin-bottom: -0.35em;
+}
+
+button:hover {
+    background-color: transparent;
+    color: #fff;
+    transition: .5s;
+}
+
+@media only screen and (min-width:768px) {
+    .body {
+        align-items: center;
+    }
+
+    .widgets {
+        display: flex;
+    }
+}
